@@ -16,14 +16,17 @@ a {
 
 h2 {
     color: #bdb679;
-    font-size: 8vw;
-    font-weight: normal;
+    font-size: 10vw;
+    font-weight: 500;
+    text-align: center;
 }
 
 h3 {
     color: #bdb679;
     font-size: 6vw;
     font-weight: normal;
+    text-align: center;
+    font-weight: 500;
 }
 
 .skip {
@@ -186,7 +189,7 @@ nav button {
 
 /* HOME STYLES */
 .home {
-    padding: 40px 70px 50px;
+    padding: 100px 70px 50px;
     text-align: center;
 }
 
@@ -196,7 +199,7 @@ nav button {
     color: #bdb679;
     font-size: 12vw;
     text-align: left;
-    font-weight: normal;
+    font-weight: 500;
 }
 
 .home-desc {
@@ -204,9 +207,9 @@ nav button {
     font-family: 'Inter';
     color: #bdb679;
     font-size: 4vw;
-    line-height: 4.5vw;
+    line-height: 5vw;
     text-align: left;
-    margin-bottom: 40px;
+    margin-top: 20px;
 }
 
 .home > img {
@@ -234,13 +237,6 @@ nav button {
         line-height: 2.5vw
     }
 
-    .home > img {
-        float: right;
-        width: 50%;
-        grid-row: 1 / span 2;
-        grid-column: 2;
-        margin: auto;
-    }
 }
 
 /* END HOME STYLES */
@@ -250,6 +246,8 @@ nav button {
 .about {
     padding: 0 40px 60px 60px;
     text-align: center;
+    display: grid;
+    grid-template-columns: auto;
 }
 
 .about > img {
@@ -259,16 +257,17 @@ nav button {
 }
 
 .about-me {
-    padding-bottom: 10px;
-    text-align: left;
+    padding-top: 30px;
+    text-align: center;
 }
 
 .about-desc {
     font-family: 'Inter';
     color: #bdb679;
-    font-size: 4vw;
+    font-size: 5vw;
+    line-height: 6vw;
     text-align: left;
-    padding-bottom: 25px;
+    padding-top: 25px;
 }
 
 /* ABOUT DESKTOP VIEW */
@@ -303,49 +302,67 @@ nav button {
 
 /* END ABOUT STYLES */
 
-/* SKILLS STYLES */
+/* SKILLS AND PROJECTS STYLES */
 
-.skills {
+.skills .projects {
     padding: 0 40px 0 60px;
     text-align: center;
 }
 
+.swipe-instructions {
+    color: rgb(170, 170, 170);
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    padding-top: 20px;
+}
+
 .bubble-container {
-    display: grid;
-    grid-template-rows: auto auto auto auto;
+    display: flex;
+    /* grid-template-rows: auto auto auto auto; */
     justify-content: center;
     height: auto;
     gap: 5vw;
-    padding: 25px 0;
+    padding: 25px 0 70px 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    transition: transform 0.3 ease-in-out;
+    will-change: transform;
 }
 
-.skills-bubble {
+.info-bubble {
+    flex: 0 0 100%;
+    box-sizing: border-box;
     background-color: rgb(0, 0, 0);
-    border: 2px solid #bdb679;
-    border-radius: 20px;
-    padding: 25px;
-    width: 70%;
-    height: auto;
-    padding-top: 3vw;
+    border: 1px solid #bdb679;
+    border-radius: 40px;
+    padding: 20px;
+    width: 400px;
+    height: 200px;
     gap: 7vw;
     margin: auto;
-    transition: all .2s ease-in-out;
 }
 
-.skills-bubble:hover, .skils-bubble:focus {
-    transform: scale(1.1);
-    background-color: rgb(30, 30, 30)
-}
 
 .bubble-title {
-    font-size: 4.5vw;
     padding-bottom: 20px;
 }
 
 .bubble-content {
-    font-size: 3.5vw;
-    line-height: 4vw;
+    font-size: 23px;
+    line-height: 30px;
     color: white;
+    text-align: center;
+}
+
+.projects .bubble-content {
+    text-align: left;
+    margin: 0 40px;
+}
+
+.bubble-content-back {
+    display: none;
 }
 
 /* SKILLS TABLET VIEW */
@@ -358,15 +375,15 @@ nav button {
         box-sizing: border-box;
     }
 
-    .skills-bubble:nth-child(2n) {
+    .info-bubble:nth-child(2n) {
         justify-self: start;
     }
 
-    .skills-bubble:nth-child(2n+1) {
+    .info-bubble:nth-child(2n+1) {
         justify-self: end;
     }
 
-    .skills-bubble {
+    .info-bubble {
         width: 60%;
         height: 19vw;
         margin: 0 20px;
@@ -398,18 +415,24 @@ nav button {
         height: auto;
     }
 
-    .skills-bubble:nth-child(2n) {
+    .info-bubble:nth-child(2n) {
         justify-self: start;
     }
 
-    .skills-bubble:nth-child(2n+1) {
+    .info-bubble:nth-child(2n+1) {
         justify-self: end;
     }
 
-    .skills-bubble {
+    .info-bubble {
         width: 50%;
         height: 150px;
         margin: 0 20px;
+        transition: all .2s ease-in-out;
+    }
+
+    .info-bubble:hover, .skils-bubble:focus {
+        transform: scale(1.1);
+        background-color: rgb(30, 30, 30)
     }
 
     .bubble-title {
@@ -422,19 +445,46 @@ nav button {
         color: white;
     }
 }
-/* END SKILLS STYLES */
-
-/* PROJECTS STYLES */
-
-.projects-title {
-    padding: 0 40px 0 60px;
-    text-align: center;
-}
-
-/* END PROJECTS STYLES */
+/* END SKILLS AND PROJECTS STYLES */
 
 /* CONTACT STYLES */
+.contact-content {
+    display: grid;
+    grid-template-columns: auto;
+    margin: auto;
+    margin-top: 30px;
+    gap: 30px;
+    justify-content: center;
+    align-content: center;
+}
+.contact-bubble {
+    border: 1px solid #bdb679;
+    width: 400px;
+    height: 80px;
+    align-content: center;
+    border-radius: 30px;
+}
 
+.contact-bubble-inside {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-bubble-inside > img {
+    width: 50px;
+    height: auto;
+    margin: auto;
+}
+
+.contact-bubble-inside > p {
+    margin-right: 60px;
+    color: white;
+    font-size: 32px;
+    font-weight: 300;
+}
 
 
 /* END CONTACT STYLES */
