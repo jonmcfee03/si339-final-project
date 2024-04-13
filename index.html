@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.PNG" />
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Jon's Portfolio</title>
+</head>
+<body>
+    <a class="skip" href="#main">Skip to Main Content</a>
+    <nav id="nav">
+        <ul class="nav-container">
+            <li><button id="nav-button"><img src="images/three-bar.png" alt="" class="nav-icon"></button></li>
+
+            <li class="home-link"><a href="#home" id="home-link" class="nav-link">Home</a></li>
+            <li><a href=#about id="about-link" class="nav-link">About</a></li>
+            <li><a href=#skills id="skills-link" class="nav-link">Skills</a></li>
+            <li><a href=#projects id="projects-link" class="nav-link">Projects</a></li>
+            <li><a href=#contact id="contact-link" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        //this script is for mobile nav bar
+        const nav_button = document.getElementById("nav-button");
+        const nav = document.getElementById("nav");
+        const nav_links = document.getElementsByClassName("nav-link");
+
+        nav_button.addEventListener("click", () => {
+            nav.classList.toggle("nav-toggle");
+
+            for (let i = 0; i < nav_links.length; i++) {
+                if (nav_links[i].getAttribute("tabindex") === "0") {
+                    nav_links[i].setAttribute("tabindex", "-1");
+                } else {
+                    nav_links[i].setAttribute("tabindex", "0");
+                }
+            }
+        });
+
+        for (let i = 0; i < nav_links.length; i++) {
+            nav_links[i].addEventListener("click", () => {
+                nav.classList.toggle("nav-toggle");
+                for (let i = 0; i < nav_links.length; i++) {
+                    if (nav_links[i].getAttribute("tabindex") === "0") {
+                        nav_links[i].setAttribute("tabindex", "-1");
+                    } else {
+                        nav_links[i].setAttribute("tabindex", "0");
+                    }
+                }
+            });
+        }
+
+    </script>
+
+    <main id="main">
+        <div class="home" id="home">
+            <h1 class="home-name">JONATHAN<br>MCFEE</h1>
+            <p class="home-desc">Computer Science<br>
+                                    University of Michigan '25<br>
+                                    Aspiring Software Engineer</p>
+            <img src="images/headshot.jpg" alt="Professional Headshot of myself">
+        </div>
+        <div class="about" id="about">
+            <h2 class="about-me">
+                About Me
+            </h2>
+            <p class="about-desc">
+                I'm a junior at the University of Michigan majoring in Computer Science. My passion lies in software engineering, and I thoroughly enjoy diving into my studies. Outside the classroom, you'll find me actively involved in the Reach Consulting Group and the Delta Tau Delta Fraternity. As a social person, I genuinely love making new friends and thriving as part of a team.
+            </p>
+
+            <img src="images/portrait.jpg" alt="another photo of me">
+        </div>
+        <div class="skills" id="skills">
+            <h2 class="skills-title">Skills</h2>
+
+            <div class="bubble-container">
+                <div class="skills-bubble">
+                    <h3 class="bubble-title">Languages</h3>
+                    <p class="bubble-content">
+                        C/C++, Python, JavaScript, HTML, CSS, MATLAB
+                    </p>
+                </div>
+                <div class="skills-bubble">
+                    <h3 class="bubble-title">Relevant Courses</h3>
+                    <p class="bubble-content">
+                        Operating Systems, Software Engineering,
+                        Web Design, Data Structures and Algorithms,
+                        Computer Architecture
+                    </p>
+                </div>
+                <div class="skills-bubble">
+                    <h3 class="bubble-title">Interests</h3>
+                    <p class="bubble-content">
+                        Software Engineering, Fullstack Engineering,
+                        Backend Engineering, Finance/Trading, Machine Learning
+                    </p>
+                </div>
+                <div class="skills-bubble">
+                    <h3 class="bubble-title">Technologies</h3>
+                    <p class="bubble-content">
+                        Linux, Windows, AWS, Git, DynamoDB, SQL, JSON,
+                        Node.js, Express.js, React.js
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="projects" id="projects">
+            <h2 class="projects-title">Projects</h2>
+        </div>
+        <div class="contact" id="contact">
+            <h2 class="contact-title">Connect With Me</h2>
+
+            <div class="contact-content">
+                <a href="" rel="noreferrer" target="_blank" class="contact-bubble">
+                    <div class="contact-bubble-inside">
+                        <img src="images/linkedinlogo.png">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
