@@ -322,57 +322,77 @@ nav button {
     padding-top: 20px;
 }
 
+.carousel {
+    width: 100%;
+}
+
 .bubble-container {
     display: grid;
-    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 100%;
     justify-content: center;
-    height: auto;
-    gap: 5vw;
     padding-top: 25px;
+    width: 100%;
+    gap: 30px;
 }
 
 .info-bubble {
-    background-color: rgb(0, 0, 0);
-    border: 1px solid #bdb679;
-    border-radius: 40px;
-    width: 70%;
-    height: auto;
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
 
     margin: auto;
-    padding: 1rem 1rem 3rem;
-    z-index: 100;
+    /* padding: 1rem 1rem 3rem; */
+    /* z-index: 100; */
+
+    /* prolly need query for this */
+    perspective: 1000px;
 }
 
 .info-bubble-inner {
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid #bdb679;
+    border-radius: 40px;
     position: relative;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
-
-.info-bubble-inner.is-flipped {
-    transform: rotateY(180deg);
-}
-
 
 .bubble-title {
     padding-bottom: 20px;
 }
 
-.bubble-content {
+.info-bubble:hover .info-bubble-inner {
+    transform: rotateY(180deg);
+  }
+
+.bubble-content-front, .bubble-content-back {
+    padding-top: 20px;
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-backface-visibility: hidden; /* for safari */
+    backface-visibility: hidden;
+
     font-size: 23px;
     line-height: 30px;
     color: white;
     text-align: center;
 }
 
-.projects .bubble-content {
-    text-align: left;
-    margin: 0 40px;
-}
 
 .bubble-content-back {
-    display: none;
+    transform: rotateY(180deg);
+}
+
+.projects .bubble-content-front, .projects .bubble-content-back {
+    text-align: left;
 }
 
 /* SKILLS TABLET VIEW */
@@ -440,10 +460,10 @@ nav button {
         transition: all .2s ease-in-out;
     }
 
-    .info-bubble:hover, .skils-bubble:focus {
+    /* .info-bubble:hover, .skils-bubble:focus {
         transform: scale(1.1);
         background-color: rgb(30, 30, 30)
-    }
+    } */
 
     .bubble-title {
         font-size: 2vw;
