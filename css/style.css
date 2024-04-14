@@ -50,7 +50,7 @@ nav {
     background-color: rgb(30, 30, 30);
 
     /* transition */
-    transition: left 1s;
+    transition: left 0.5s;
     z-index: 1000;
 }
 
