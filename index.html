@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/nav.js"></script>
-    <script src="js/carousel.js"></script>
     <title>Jon's Portfolio</title>
 </head>
 <body>
@@ -45,103 +44,110 @@
         <div class="skills" id="skills">
             <h2 class="skills-title">Skills</h2>
             <p class="swipe-instructions">Swipe left to view more,<br>click on card for more information</p>
-            <div class="bubble-container">
-                <div class="info-bubble">
-                    <h3 class="bubble-title">Languages</h3>
-                    <p class="bubble-content">
-                        C/C++, Python, JavaScript, HTML, CSS, MATLAB
-                    </p>
-                </div>
-                <div class="info-bubble">
-                    <h3 class="bubble-title">Relevant Courses</h3>
-                    <p class="bubble-content">
-                        Operating Systems, Software Engineering,
-                        Web Design, Data Structures and Algorithms,
-                        Computer Architecture
-                    </p>
-                </div>
-                <div class="info-bubble">
-                    <h3 class="bubble-title">Interests</h3>
-                    <p class="bubble-content">
-                        Software Engineering, Fullstack Engineering,
-                        Backend Engineering, Finance/Trading, Machine Learning
-                    </p>
-                </div>
-                <div class="info-bubble">
-                    <h3 class="bubble-title">Technologies</h3>
-                    <p class="bubble-content">
-                        Linux, Windows, AWS, Git, DynamoDB, SQL, JSON,
-                        Node.js, Express.js, React.js
-                    </p>
+            <div id="carousel" class="carousel">
+                <div class="bubble-container">
+                    <div class="info-bubble initial">
+                        <h3 class="bubble-title">Languages</h3>
+                        <p class="bubble-content">
+                            C/C++, Python, JavaScript, HTML, CSS, MATLAB
+                        </p>
+                    </div>
+                    <div class="info-bubble">
+                        <h3 class="bubble-title">Relevant Courses</h3>
+                        <p class="bubble-content">
+                            Operating Systems, Software Engineering,
+                            Web Design, Data Structures and Algorithms,
+                            Computer Architecture
+                        </p>
+                    </div>
+                    <div class="info-bubble">
+                        <h3 class="bubble-title">Interests</h3>
+                        <p class="bubble-content">
+                            Software Engineering, Fullstack Engineering,
+                            Backend Engineering, Finance/Trading, Machine Learning
+                        </p>
+                    </div>
+                    <div class="info-bubble">
+                        <h3 class="bubble-title">Technologies</h3>
+                        <p class="bubble-content">
+                            Linux, Windows, AWS, Git, DynamoDB, SQL, JSON,
+                            Node.js, Express.js, React.js
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="projects" id="projects">
             <h2 class="projects-title">Projects</h2>
             <p class="swipe-instructions">Swipe left to view more,<br>click on card for more information</p>
-            <div class="bubble-container">
-                <div class="info-bubble">
-                    <h3 class="bubble-title">Thread Library</h3>
-                    <p class="bubble-content">
-                        Impelemented a user thread library
-                        in C++ with full concurrency support
-                        using mutex and CVs
-                    </p>
-                    <p class="bubble-content-back">
-                        Language: C++<br>
-                        Use Case: Thread libraries are useful for
-                        creating applications that require multiple seperate tasks simultaneously
-                    </p>
-                </div>
-                <div class="info-bubble">
-                    <h3 class="bubble-title">Open Source Contribution</h3>
-                    <p class="bubble-content">
-                        Contributed to ClickHouse open-source database
-                    </p>
-                    <p class="bubble-content-back">
-                        Language: C++<br>
-                        Use Case:ClickHouse is actively used by many applications for data storage
-                    </p>
-                </div>
-                <div class="info-bubble">
-                    <h3 class="bubble-title">Multi-threaded Chat Network</h3>
-                    <p class="bubble-content">
-                        Utilized Windows sockets, networking, and thread APIs to build a chat client-server program in C++
-                    </p>
-                    <p class="bubble-content-back">
-                        Language: C++<br>
-                        Use Case: Client-Server communication is common for internet-enabled applications
-                    </p>
-                </div>
-                <div class="info-bubble">
-                    <h3 class="bubble-title">Stock Price Analysis</h3>
-                    <p class="bubble-content">
-                        Analyzed Netflix's (NFLX) stock price against the frequency of Tweets for its TOp 10 shows to identify price indicators
-                    </p>
-                    <p class="bubble-content-back">
-                        Language: Python, SQLite<br>
-                        Use Case: Identify patterns between the popularity of Netflix's shows and their stock price
-                    </p>
-                </div>
-                <div class="info-bubble">
-                    <h3 class="bubble-title">Pipelined CPU Simulation</h3>
-                    <p class="bubble-content">
-                        Developed a simplified 32-bit ARM CPU simulator with data-forwarding
-                    </p>
-                    <p class="bubble-content-back">
-                        Language: C<br>
-                        Use Case: Understand how assembly is executed by a machine
-                    </p>
-                </div>
-                <div class="info-bubble">
-                    <h3 class="bubble-title">Delta Debugger</h3>
-                    <p class="bubble-content">
-                        Designed a Python scipt that identifies the minimal interesting subset of a given set
-                    </p>
-                    <p class="bubble-content-back">
-                        Language: Python<br>
-                        Use Case: Identifying which changes or circumstances cause a bug
-                    </p>
+            <div class="carousel">
+                <div class="bubble-container">
+                    <div class="info-bubble initial">
+                        <h3 class="bubble-title">Thread Library</h3>
+                        <p class="bubble-content">
+                            Impelemented a user thread library
+                            in C++ with full concurrency support
+                            using mutex and CVs
+                        </p>
+                        <p class="bubble-content-back">
+                            Language: C++<br>
+                            Use Case: Thread libraries are useful for
+                            creating applications that require multiple seperate tasks simultaneously
+                        </p>
+                    </div>
+                    <div class="info-bubble">
+                        <h3 class="bubble-title">Open Source Contribution</h3>
+                        <p class="bubble-content">
+                            Contributed to ClickHouse open-source database
+                        </p>
+                        <p class="bubble-content-back">
+                            Language: C++<br>
+                            Use Case:ClickHouse is actively used by many applications for data storage
+                        </p>
+                    </div>
+                    <div class="info-bubble">
+                        <h3 class="bubble-title">Multi-threaded Chat Network</h3>
+                        <p class="bubble-content">
+                            Utilized Windows sockets, networking, and thread APIs to build a chat client-server program in C++
+                        </p>
+                        <p class="bubble-content-back">
+                            Language: C++<br>
+                            Use Case: Client-Server communication is common for internet-enabled applications
+                        </p>
+                    </div>
+                    <div class="info-bubble">
+                        <h3 class="bubble-title">Stock Price Analysis</h3>
+                        <p class="bubble-content">
+                            Analyzed Netflix's (NFLX) stock price against the frequency of Tweets for its TOp 10 shows to identify price indicators
+                        </p>
+                        <p class="bubble-content-back">
+                            Language: Python, SQLite<br>
+                            Use Case: Identify patterns between the popularity of Netflix's shows and their stock price
+                        </p>
+                    </div>
+                    <div class="info-bubble">
+                        <h3 class="bubble-title">Pipelined CPU Simulation</h3>
+                        <p class="bubble-content">
+                            Developed a simplified 32-bit ARM CPU simulator with data-forwarding
+                        </p>
+                        <p class="bubble-content-back">
+                            Language: C<br>
+                            Use Case: Understand how assembly is executed by a machine
+                        </p>
+                    </div>
+                    <div class="info-bubble">
+                        <h3 class="bubble-title">Delta Debugger</h3>
+                        <p class="bubble-content">
+                            Designed a Python scipt that identifies the minimal interesting subset of a given set
+                        </p>
+                        <p class="bubble-content-back">
+                            Language: Python<br>
+                            Use Case: Identifying which changes or circumstances cause a bug
+                        </p>
+                    </div>
+
+                    <div class="next-button"></div>
+                    <div class="prev-button"></div>
                 </div>
             </div>
         </div>
@@ -181,8 +187,13 @@
                         </div>
                     </a>
                 </div>
+
+                <div class="next-button"></div>
+                <div class="prev-button"></div>
             </div>            
         </div> 
     </main>
+
+    <script src="js/carousel.js"></script>
 </body>
 </html>

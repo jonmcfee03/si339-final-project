@@ -51,6 +51,7 @@ nav {
 
     /* transition */
     transition: left 1s;
+    z-index: 1000;
 }
 
 .nav-toggle {
@@ -318,32 +319,25 @@ nav button {
 }
 
 .bubble-container {
-    display: flex;
-    /* grid-template-rows: auto auto auto auto; */
+    display: grid;
+    grid-template-rows: auto auto auto auto;
     justify-content: center;
     height: auto;
     gap: 5vw;
-    padding: 25px 0 70px 0;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    transition: transform 0.3 ease-in-out;
-    will-change: transform;
+    padding-top: 25px;
 }
 
 .info-bubble {
-    flex: 0 0 100%;
-    box-sizing: border-box;
     background-color: rgb(0, 0, 0);
     border: 1px solid #bdb679;
     border-radius: 40px;
-    padding: 20px;
-    width: 400px;
-    height: 200px;
-    gap: 7vw;
-    margin: auto;
-}
+    width: 500px;
+    height: 250px;
 
+    margin: auto;
+    padding: 1rem 4rem;
+    z-index: 100;
+}
 
 .bubble-title {
     padding-bottom: 20px;
