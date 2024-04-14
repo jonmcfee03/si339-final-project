@@ -339,6 +339,10 @@ nav button {
     z-index: 100;
 }
 
+.info-bubble.is-flipped {
+    transform: rotateY(180deg);
+}
+
 .bubble-title {
     padding-bottom: 20px;
 }
