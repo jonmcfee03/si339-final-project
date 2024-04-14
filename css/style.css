@@ -341,10 +341,6 @@ nav button {
     height: 300px;
 
     margin: auto;
-    /* padding: 1rem 1rem 3rem; */
-    /* z-index: 100; */
-
-    /* prolly need query for this */
     perspective: 1000px;
 }
 
@@ -364,9 +360,10 @@ nav button {
     padding-bottom: 20px;
 }
 
-.info-bubble:hover .info-bubble-inner {
+.info-bubble.toggled .info-bubble-inner {
     transform: rotateY(180deg);
-  }
+}
+
 
 .bubble-content-front, .bubble-content-back {
     padding-top: 20px;

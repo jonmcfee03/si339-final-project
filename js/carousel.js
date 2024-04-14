@@ -1,23 +1,10 @@
-function scrollToItem(itemPosition, numItems, scroller) {
-    scroller.scrollTo({
-      scrollLeft: Math.floor(
-        scroller.scrollWidth * (itemPosition / numItems)
-      ),
-      behavior: 'smooth'
+document.addEventListener("DOMContentLoaded", function() {
+
+  const bubbles = document.getElementsByClassName("info-bubble");
+
+  for (let i = 0; i < bubbles.length; ++i) {
+    bubbles[i].addEventListener("click", function() {
+      this.classList.toggle("toggled");
     })
   }
-
-  function testSupportsSmoothScroll () {
-    var supports = false
-    try {
-      var div = document.createElement('div')
-      div.scrollTo({
-        top: 0,
-        get behavior () {
-          supports = true
-          return 'smooth'
-        }
-      })
-    } catch (err) {}
-    return supports
-  }
+});
