@@ -306,8 +306,12 @@ nav button {
 /* SKILLS AND PROJECTS STYLES */
 
 .skills .projects {
-    padding: 0 40px 0 60px;
+    padding: 0 70px 0 60px;
     text-align: center;
+}
+
+.projects-title {
+    padding-top: 40px;
 }
 
 .swipe-instructions {
@@ -339,9 +343,17 @@ nav button {
     z-index: 100;
 }
 
-.info-bubble.is-flipped {
+.info-bubble-inner {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.info-bubble-inner.is-flipped {
     transform: rotateY(180deg);
 }
+
 
 .bubble-title {
     padding-bottom: 20px;
@@ -352,6 +364,10 @@ nav button {
     line-height: 30px;
     color: white;
     text-align: center;
+    
+    /* position: absolute; */
+    -webkit-backface-visibility: hidden;
+
 }
 
 .projects .bubble-content {
