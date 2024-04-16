@@ -232,7 +232,7 @@ nav button {
         justify-content: space-evenly;
         align-items: center;
         text-align: left;
-        padding-top: 120px;
+        padding-top: 30px;
         margin-bottom: 80px;
         margin-left: 5%;
     }
@@ -242,7 +242,8 @@ nav button {
 
     .home-desc {
         font-size: 2vw;
-        line-height: 2.5vw
+        line-height: 2.5vw;
+        margin-top: 0px;
     }
 
 }
@@ -436,6 +437,11 @@ nav button {
 
 /* SKILLS TABLET VIEW */
 @media screen and (min-width: 481px) {
+
+    .skills-title, .projects-title, .contact-title {
+        font-size: 56px;
+    }
+
     .bubble-container {
         grid-template-columns: 40% 40%;
         justify-content: center;
