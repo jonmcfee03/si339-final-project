@@ -217,8 +217,15 @@ nav button {
     width: 80%;
 }
 
+@media screen and (min-width: 481px) {
+    .home-desc {
+        font-size: 28px;
+        line-height: 34px;
+    }
+}
+
 /* HOME DESKTOP VIEW */
-@media screen and (min-width: 980) {
+@media screen and (min-width: 980px) {
     .home {
         display: grid;
         grid-template-columns: auto auto;
@@ -433,10 +440,6 @@ nav button {
         grid-template-columns: 40% 40%;
         justify-content: center;
         box-sizing: border-box;
-    }
-
-    .info-bubble--static {
-
     }
 
     .bubble-title {
