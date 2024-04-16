@@ -141,7 +141,7 @@ nav button {
 @media screen and (min-width: 481px) {
     nav {
         position: fixed;
-        top: auto;
+        top: 0;
         bottom: auto;
         left: 0;
         height: auto;
