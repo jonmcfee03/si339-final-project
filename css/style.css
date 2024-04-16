@@ -91,7 +91,7 @@ nav button {
 }
 
 /* TABLET STYLE */
-@media screen and (min-width: 481px) {
+/* @media screen and (min-width: 481px) {
     nav {
         position: fixed;
         bottom: 0;
@@ -135,10 +135,10 @@ nav button {
         text-decoration: underline;
         text-decoration-thickness: 2px;
     }
-}
+} */
 
 /* DESKTOP STYLE */
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 481px) {
     nav {
         position: fixed;
         top: auto;
