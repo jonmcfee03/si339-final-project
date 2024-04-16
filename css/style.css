@@ -91,7 +91,7 @@ nav button {
 }
 
 /* TABLET STYLE */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 481px) {
     nav {
         position: fixed;
         bottom: 0;
@@ -138,7 +138,7 @@ nav button {
 }
 
 /* DESKTOP STYLE */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 980px) {
     nav {
         position: fixed;
         top: auto;
@@ -218,7 +218,7 @@ nav button {
 }
 
 /* HOME DESKTOP VIEW */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 980) {
     .home {
         display: grid;
         grid-template-columns: auto auto;
@@ -271,15 +271,15 @@ nav button {
     padding-top: 25px;
 }
 
-/* ABOUT DESKTOP VIEW */
-@media screen and (min-width: 800px) {
+/* ABOUT TABLET & DESKTOP VIEW */
+@media screen and (min-width: 481px) {
     .about {
         display: grid;
         grid-template-columns: auto auto;
         justify-content: space-evenly;
         align-items: center;
         text-align: left;
-        padding-bottom: 100px;
+        padding-bottom: 40px;
     }
 
     .about > img {
@@ -293,11 +293,13 @@ nav button {
     .about-me {
         font-size: 4vw;
         padding: 0;
+        text-align: left;
     }
 
     .about-desc {
-        font-size: 2vw;
+        font-size: 18px;
         padding: 0;
+        line-height: 22px;
     }
 }
 
@@ -426,85 +428,43 @@ nav button {
 }
 
 /* SKILLS TABLET VIEW */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 481px) {
     .bubble-container {
-        grid-template-columns: auto auto;
-        grid-template-rows: 20vw;
+        grid-template-columns: 40% 40%;
         justify-content: center;
-        gap: 75px 75px;
         box-sizing: border-box;
     }
 
-    .info-bubble:nth-child(2n) {
-        justify-self: start;
-    }
+    .info-bubble--static {
 
-    .info-bubble:nth-child(2n+1) {
-        justify-self: end;
-    }
-
-    .info-bubble {
-        width: 60%;
-        height: 19vw;
-        margin: 0 20px;
     }
 
     .bubble-title {
-        font-size: 3vw;
+        font-size: 26px;
     }
 
     .bubble-content {
-        font-size: 1.75vw;
-        line-height: 2.5vw;
-        color: white;
+        font-size: 16px;
+    }
+
+    .info-bubble {
+        height: 250px;
     }
 }
 
-/* SKILLS DESKTOP VIEW */
-@media screen and (min-width: 1200px) {
+/* SKILLS DESKTOP VIEW
+@media screen and (min-width: 980) {
     .skills-title {
         font-size: 4.5vw;
     }
 
     .bubble-container {
-        grid-template-columns: auto auto;
-        grid-template-rows: 20vw;
+        grid-template-columns: 35% 35%;
         justify-content: center;
-        gap: 0 75px;
         box-sizing: border-box;
-        height: auto;
-    }
-
-    .info-bubble:nth-child(2n) {
-        justify-self: start;
-    }
-
-    .info-bubble:nth-child(2n+1) {
-        justify-self: end;
-    }
-
-    .info-bubble {
-        width: 50%;
-        height: 150px;
-        margin: 0 20px;
-        transition: all .2s ease-in-out;
-    }
-
-    /* .info-bubble:hover, .skils-bubble:focus {
-        transform: scale(1.1);
-        background-color: rgb(30, 30, 30)
     } */
 
-    .bubble-title {
-        font-size: 2vw;
-    }
-
-    .bubble-content {
-        font-size: 1vw;
-        line-height: 1.5vw;
-        color: white;
-    }
-}
+/* } */
 /* END SKILLS AND PROJECTS STYLES */
 
 /* CONTACT STYLES */
@@ -569,6 +529,24 @@ nav button {
     padding-top: 20px;
     padding-bottom: 70px;
     text-decoration: underline;
+}
+
+@media screen and (min-width: 481px) {
+    .contact-container {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+    }
+
+    .contact-content {
+        justify-self: end;
+    }
+
+    .return-to-top {
+        padding-bottom: 120px;
+    }
 }
 
 /* END CONTACT STYLES */
