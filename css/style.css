@@ -141,13 +141,14 @@ nav button {
 @media screen and (min-width: 481px) {
     nav {
         position: fixed;
-        top: 0;
+        top: -100px;
         bottom: auto;
         left: 0;
         height: auto;
         background: black;
         width: 100%;
         border-bottom: 1px solid rgb(170, 170, 170);
+        transition: top 0.3s ease-in-out;
     }
 
     .nav-container {
@@ -217,6 +218,11 @@ nav button {
     width: 80%;
 }
 
+.home-nav {
+    display: none;
+}
+
+/* HOME TABLET VIEW */
 @media screen and (min-width: 481px) {
     .home-desc {
         font-size: 28px;
@@ -229,11 +235,11 @@ nav button {
     .home {
         display: grid;
         grid-template-columns: auto auto;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
         text-align: left;
-        padding-top: 30px;
-        margin-bottom: 80px;
+        padding-top: 120px;
+        margin-bottom: 40px;
         margin-left: 5%;
     }
     .home-name {
@@ -243,7 +249,27 @@ nav button {
     .home-desc {
         font-size: 2vw;
         line-height: 2.5vw;
-        margin-top: 0px;
+        margin-top: 20px;
+    }
+
+    .home-nav {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: right;
+        row-gap: 24px;
+    }
+
+    .home-nav-link {
+        color: white;
+        text-decoration: none;
+        font-size: 70px;
+        transition: all 0.1s ease-in-out;
+    }
+
+    .home-nav-link:hover, .home-nav-link:focus {
+        color:rgb(119, 119, 119);
+        text-decoration: underline;
+
     }
 
 }
@@ -302,14 +328,20 @@ nav button {
         font-size: 4vw;
         padding: 0;
         text-align: left;
+        /* align-self: end; */
     }
 
     .about-desc {
         font-size: 18px;
         padding: 0;
         line-height: 22px;
+        align-self: start;
+        margin-right: 100px;
+        line-height: 26px;
     }
 }
+
+
 
 /* END ABOUT STYLES */
 
@@ -461,19 +493,13 @@ nav button {
     }
 }
 
-/* SKILLS DESKTOP VIEW
-@media screen and (min-width: 980) {
-    .skills-title {
-        font-size: 4.5vw;
+/* SKILLS DESKTOP VIEW */
+@media screen and (min-width: 980px) {
+    .info-bubble {
+        height: 200px;
     }
 
-    .bubble-container {
-        grid-template-columns: 35% 35%;
-        justify-content: center;
-        box-sizing: border-box;
-    } */
-
-/* } */
+}
 /* END SKILLS AND PROJECTS STYLES */
 
 /* CONTACT STYLES */
@@ -500,6 +526,10 @@ nav button {
     border-radius: 25px;
     padding: 10px 20px;
     box-sizing: border-box;
+}
+
+.contact-bubble:hover p, .contact-bubble > a:focus p {
+    text-decoration: underline;
 }
 
 .contact-bubble-inside {
@@ -555,6 +585,27 @@ nav button {
 
     .return-to-top {
         padding-bottom: 120px;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .contact-title {
+        padding-top: 60px;
+        padding-bottom: 0;
+    }
+    .michigan-photo {
+        width: 40%;
+        justify-self: start;
+        margin: 0;
+        margin-left: 100px;
+    }
+    .contact-content {
+        justify-self: end;
+        margin: 0;
+        padding: 0;
+    }
+    .contact-bubble {
+        width: 70%;
     }
 }
 
