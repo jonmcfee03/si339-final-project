@@ -532,6 +532,12 @@ nav button {
     text-decoration: underline;
 }
 
+.contact-bubble:hover, .contact-bubble:focus {
+    transform: scale(1.2);
+    transition: transform 0.4s ease-in-out;
+    background-color: rgb(30, 30, 30);
+}
+
 .contact-bubble-inside {
     display: grid;
     grid-template-columns: auto auto;
